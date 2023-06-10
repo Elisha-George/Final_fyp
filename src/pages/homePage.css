@@ -267,6 +267,9 @@
   height: 17rem;
   background-size: cover;
   background-attachment: fixed;
+  width: 100%;
+  padding-left: 0;
+  margin-left: 0;
 
 }
 
@@ -400,7 +403,9 @@ max-width: 400px;
 
   /* ============================newletter====================== */
 
-
+.sec_newsletter{
+  margin-bottom: 30px;
+}
   .newsLetter_heading{
     margin-top: 30px;
     color: black; 
@@ -449,6 +454,7 @@ max-width: 400px;
       padding: 10px 15px;
     }
   }
+  
   
 
 /* .footerCol3 input{

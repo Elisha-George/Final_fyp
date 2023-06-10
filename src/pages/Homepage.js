@@ -11,11 +11,40 @@ import { useEffect, useState } from "react";
 
 
 
+// Axios
+import axios from 'axios';
+
+// Toastify
+import {  toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; 
+
+
 
 
 const Homepage = () => {
 
   const [add,setAdd] = useState('');
+  const [email, setEmail] = useState("");
+
+
+  // Function to handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      // Send a POST request to the backend with the email
+      const response = await axios.post("http://localhost/FYP/sendMail.php", { email });
+      console.log(response.data); // Assuming the backend sends a response message
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+
+    // console.log(e.target.value);
+  };
 
 
   useEffect(()=>{
@@ -281,10 +310,18 @@ const Homepage = () => {
          <div className="col-md-12">
              <div className=" footerCol3 ">
                  <h1 className='newsLetter_heading text-center'>Subscribe To Our Newsletter</h1><p className='text-center'>Receive updates instantly</p>   
-                 <form class="newsletter-form">
-                  <input type="email" placeholder="Enter your email" className="newsletter-input"/>
-                  <button type="submit" className="newsletter-button">Subscribe</button>
-                </form>
+                 <form onSubmit={handleSubmit} className="newsletter-form">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="newsletter-input"
+                  value={email}
+                  onChange={handleEmailChange}
+                />
+                <button type="submit" className="newsletter-button">
+                  Subscribe
+                </button>
+              </form>
                 
                  {/* <div className="input-group NewsForm">
                    <input type="email" className="form-control news_input" placeholder="Your Email"/>
