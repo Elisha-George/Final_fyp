@@ -18,6 +18,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
+import {BsFillEyeFill} from 'react-icons/bs'
 
 // REGEX = to have a proper input format
 const USER_REGEX = /^[A-Za-z][A-Za-z0-9-_ ]{3,23}$/;
@@ -31,6 +32,8 @@ const CNIC_REGIX = /^[0-9+]{5}-[0-9+]{7}-[0-9]{1}$/;
 
 export const Register = () => {
   const navigate = useNavigate();
+  const [showPassword, setShowPassword] = useState(false)
+
 
 
   const errRef = useRef();
@@ -134,6 +137,9 @@ export const Register = () => {
     axios.post(backend_url, sendData).then((result) => {
       if (result.data.Status == "Invalid") {
         alert("Invalid Login");
+        toast.warning("Invalid Credentials, try again");
+
+        
       } else {
         toast.success("Sign up Successfully");
         resetForm(); // Reset the form fields
@@ -163,200 +169,136 @@ export const Register = () => {
                 </div>
 
                 <form onSubmit={submitForm}>
-                  <div className="form_element" id="cnic">
-                    <FontAwesomeIcon
-                      icon={faCheck}
-                      className={validID ? "valid" : "hide"}
-                    />
-                    <FontAwesomeIcon
-                      icon={faTimes}
-                      className={validID || !id ? "hide" : "invalid"}
-                    />
+                <div className="form_element" id="cnic">
 
-                    <input
-                      type="text"
-                      name="id"
-                      placeholder="CNIC"
-                      ref={userRef}
-                      autoComplete="off"
-                      onChange={(e) => setid(e.target.value)}
-                      value={id}
-                      required
-                      aria-invalid={validID ? "false" : "true"}
-                      aria-describedby="cnic_note"
-                      onFocus={() => setIdFocus(true)}
-                      onBlur={() => setIdFocus(false)}
-                    />
+<FontAwesomeIcon icon={faCheck} className={validID ? "valid" : "hide"} />
+<FontAwesomeIcon icon={faTimes} className={validID || !id ? "hide" : "invalid"} />
 
-                    <p
-                      id="cnic_note"
-                      className={
-                        IdFocus && id && !validID ? "instructions" : "offscreen"
-                      }
-                    >
-                      <FontAwesomeIcon icon={faInfoCircle} />
-                      4 to 24 characters.
-                      <br />
-                      Must begin with a letter.
-                      <br />
-                      Letters, numbers, underscores, hyphens allowed.
-                    </p>
-                  </div>
 
-                  <div className="form_element" id="email">
-                    <FontAwesomeIcon
-                      icon={faCheck}
-                      className={validEmail && email ? "valid" : "hide"}
-                    />
+    <input  
+    type="text" 
+    name='id'  
+    placeholder='CNIC'  
+    ref={userRef}
+    autoComplete="off"
+    onChange={(e) => setid(e.target.value)}
+    value={id}
+    required
+    aria-invalid={validID ? "false" : "true"}
+    aria-describedby="cnic_note"
+    onFocus={() => setIdFocus(true)}
+    onBlur={() => setIdFocus(false)}
+     />
 
-                    <FontAwesomeIcon
-                      icon={faTimes}
-                      className={validEmail || !email ? "hide" : "invalid"}
-                    />
+</div>
+<div className="errorNotes">
+<p  id="cnic_note" className={IdFocus && id && !validID ? "instructions" : "offscreen"} >
+<FontAwesomeIcon icon={faInfoCircle} />
+4 to 24 characters.
+Must begin with a letter.
+Letters, numbers, unders.cores, hyphens allowed.
+</p>
+</div>
 
-                    <input
-                      type="email"
-                      name="email"
-                      id="email"
-                      placeholder="Email"
-                      ref={userRef}
-                      autoComplete="off"
-                      onChange={(e) => setEmail(e.target.value)}
-                      value={email}
-                      required
-                      aria-invalid={validEmail ? "false" : "true"}
-                      aria-describedby="email_note"
-                      onFocus={() => setEmailFocus(true)}
-                      onBlur={() => setEmailFocus(false)}
-                    />
+<div className="form_element" id="email">
 
-                    <p
-                      id="email_note"
-                      className={
-                        EamilFocus && email && !validEmail
-                          ? "instructions"
-                          : "offscreen"
-                      }
-                    >
-                      <FontAwesomeIcon icon={faInfoCircle} />
-                      Email must be in proper format.
-                      <br />
-                      and include '@' and '.xyz'
-                      <br />
-                    </p>
-                  </div>
+                                
+{/* <FontAwesomeIcon icon={faCheck} className={validEmail ? "valid" : "hide"} /> */}
+                            <FontAwesomeIcon icon={faTimes} className={validEmail || !email ? "hide" : "invalid"} />    
 
-                  <div className="form_element" id="name">
-                    <FontAwesomeIcon
-                      icon={faCheck}
-                      className={validName ? "valid" : "hide"}
-                    />
-                    <FontAwesomeIcon
-                      icon={faTimes}
-                      className={validName || !user ? "hide" : "invalid"}
-                    />
+                                <input 
+                                 type="email"
+                                 name='email' 
+                                 id='email' 
+                                 placeholder='Email'
+                                 ref={userRef} 
+                                 autoComplete="off"
+                                 onChange={(e) => setEmail(e.target.value)}
+                                 aria-invalid={validEmail ? "false" : "true"}
+                                 aria-describedby="email_note"
+                                 onFocus={() => setEmailFocus(true)}
+                                 onBlur={() => setEmailFocus(false)}
+                                 />
 
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      placeholder="Username"
-                      ref={userRef}
-                      autoComplete="off"
-                      onChange={(e) => setUser(e.target.value)}
-                      value={user}
-                      required
-                      aria-invalid={validName ? "false" : "true"}
-                      aria-describedby="uidnote"
-                      onFocus={() => setUserFocus(true)}
-                      onBlur={() => setUserFocus(false)}
-                    />
-                    <p
-                      id="uidnote"
-                      className={
-                        userFocus && user && !validName
-                          ? "instructions"
-                          : "offscreen"
-                      }
-                    >
-                      <FontAwesomeIcon icon={faInfoCircle} />
-                      4 to 24 characters.
-                      <br />
-                      Must begin with a letter.
-                      <br />
-                      Letters, numbers, underscores, hyphens allowed.
-                    </p>
-                  </div>
 
-                  <div className="form_element" id="password">
-                    <FontAwesomeIcon
-                      icon={faCheck}
-                      className={validPwd ? "valid" : "hide"}
-                    />
-                    <FontAwesomeIcon
-                      icon={faTimes}
-                      className={validPwd || !pwd ? "hide" : "invalid"}
-                    />
 
-                    <input
-                      id="password"
-                      type="password"
-                      name="password"
-                      placeholder="Password"
-                      onChange={(e) => setpwd(e.target.value)}
-                      value={pwd}
-                      aria-invalid={validPwd ? "false" : "true"}
-                      aria-describedby="pwdnote"
-                      onFocus={() => setPwdFocus(true)}
-                      onBlur={() => setPwdFocus(false)}
-                      autoComplete="off"
-                    />
-                    <p
-                      id="pwdnote"
-                      className={
-                        pwdFocus && !validPwd ? "instructions" : "offscreen"
-                      }
-                    >
-                      <FontAwesomeIcon icon={faInfoCircle} />
-                      8 to 24 characters.
-                      <br />
-                      Must include uppercase and lowercase letters, a number and
-                      a special character.
-                      <br />
-                      Allowed special characters:{" "}
-                      <span aria-label="exclamation mark">!</span>{" "}
-                      <span aria-label="at symbol">@</span>{" "}
-                      <span aria-label="hashtag">#</span>{" "}
-                      <span aria-label="dollar sign">$</span>{" "}
-                      <span aria-label="percent">%</span>
-                    </p>
-                  </div>
 
-                  {/*                             
-                            <div className="form_element" id="email">
+</div>
+<div className="errorNotes">
+<p id="email_note" className={EamilFocus && email && !validEmail ? "instructions" : "offscreen"}>
+<FontAwesomeIcon icon={faInfoCircle} />
+Email must be in proper format.
+and include '@' and '.xyz'<br />
+</p>
+</div>
 
-                            <FontAwesomeIcon icon={faCheck} className={validMatch && matchPwd ? "valid" : "hide"} />
-                            <FontAwesomeIcon icon={faTimes} className={validMatch || !matchPwd ? "hide" : "invalid"} />    
 
-                            <input  
-                            type="password" 
-                            name='confirmPassword' 
-                            id='confirmPassword' 
-                            placeholder='Confirm Password'
-                            onChange={(e) => setMatchPwd(e.target.value)}
-                            value={matchPwd}
-                            aria-invalid={validMatch ? "false" : "true"}
-                            aria-describedby="confirmnote"
-                            onFocus={() => setMatchFocus(true)}
-                            onBlur={() => setMatchFocus(false)}
-                                />
+<div className="form_element" id="name">
 
-                            <p id="confirmnote" className={matchFocus && !validMatch ? "instructions" : "offscreen"}>
-                            <FontAwesomeIcon icon={faInfoCircle} />
-                            Must match the first password input field.
-                            </p>
-                            </div> */}
+<FontAwesomeIcon icon={faCheck} className={validName ? "valid" : "hide"} />
+<FontAwesomeIcon icon={faTimes} className={validName || !user ? "hide" : "invalid"} />
 
+   <input 
+    type="text"
+    id="name" 
+    name="name" 
+    placeholder="Username"
+    ref={userRef}
+    autoComplete="off"
+    onChange={(e) => setUser(e.target.value)}
+    value={user}
+    required 
+    aria-invalid={validName ? "false" : "true"}
+    aria-describedby="uidnote"
+    onFocus={() => setUserFocus(true)}
+    onBlur={() => setUserFocus(false)}
+  />
+ 
+</div>
+
+<div className="errorNotes">
+<p id="uidnote" className={userFocus && user && !validName ? "instructions" : "offscreen"}>
+    <FontAwesomeIcon icon={faInfoCircle} />
+    4 to 24 characters. 
+    Must begin with a letter.
+    Letters, numbers, underscores, hyphens allowed.
+    </p>
+</div>
+
+<div className="form_element" id="password">
+
+<FontAwesomeIcon icon={faCheck} className={validPwd ? "valid" : "hide"} />
+<FontAwesomeIcon icon={faTimes} className={validPwd || !pwd ? "hide" : "invalid"} />
+
+    <input 
+     id='password'
+     type={showPassword ? 'text' : 'password'}
+     name='password'
+     placeholder='Password' 
+     onChange={(e) => setpwd(e.target.value)} 
+    value= {pwd} 
+    aria-invalid={validPwd ? "false" : "true"}
+    aria-describedby="pwdnote"
+    onFocus={() => setPwdFocus(true)}
+    onBlur={() => setPwdFocus(false)}
+    autoComplete="off"
+
+    />
+  
+
+   <BsFillEyeFill className='eye_icon' onClick={()=>setShowPassword(prevState => !prevState) }/>
+</div>
+
+<div className="errorNotes">
+<p id="pwdnote" className={pwdFocus && !validPwd ? "instructions" : "offscreen"}>
+    <FontAwesomeIcon icon={faInfoCircle} />
+    8 to 24 characters.
+    An upper and Lower Case with Special Char .
+    <span aria-label="exclamation mark">!</span> <span aria-label="at symbol">@</span> <span aria-label="hashtag">#</span> <span aria-label="dollar sign">$</span> <span aria-label="percent">% is required</span>
+     </p>
+</div>
+
+                 
                   <div className="form_element" id="signup">
                     <button type="submit">Signup</button>
 

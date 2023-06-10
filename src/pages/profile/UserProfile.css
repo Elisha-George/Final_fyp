@@ -10,8 +10,11 @@
     position: relative;
     top: 60px;
     left: 50px;
+}.container-profile{
+    margin-bottom: 550px;
 }
 .profileName{
+    display: block;
     position: relative;
     top: 87px;
     left: 50px;
@@ -23,11 +26,14 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    top: 100px;
+    top: 80px;
     right: 165px;
     height: 100px;
     margin-left: 220px;
     
+}
+.profileUser{
+    display: flex;
 }
 .profileCnic, .profileEmail{
    
@@ -35,6 +41,7 @@
     font-family: 'Times New Roman', Times, serif;
     color: black;
     font-size: 1.2rem;
+    
 
 }
 

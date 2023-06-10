@@ -7,9 +7,13 @@
     font-family: 'Poppins', sans-serif;
 }
 .about{
-    background-color: rgb(231, 226, 226);
+    /* background-color: rgb(231, 226, 226); */
+    background-color: white;
+    margin-bottom: 40px;
 }
-
+.aboutDiv{
+    margin-bottom: 40px;
+}
 
 .about_hero img{
 
@@ -21,6 +25,15 @@
     opacity:1;
     filter: brightness(0.5);
 
+}
+.about_head img{
+    background-size: cover;
+
+    width: 400px;
+    height: 80vh;
+    margin-top: 40px;
+    opacity:1;
+    filter: brightness(0.5);
 }
 
 .about_para
@@ -35,6 +48,40 @@
     position: relative;
     font-size: 90px;
     top: 90px;
-    right: 180px;
+    right: 10px;
     font-weight: 400;
+    font-family: 'Times New Roman', Times, serif;
+    /* color:  #D04068;; */
+    /* font-size: 3rem; */
+}
+.about_images
+{
+    width:  320px;
+    height: 253px;
+    filter: brightness(50%);
+  box-shadow: rgba(100, 99, 99, 0.6) 0px 3px 8px;
+
+}
+
+.midtitle{
+    font-family: 'Times New Roman', Times, serif;
+    color:  #D04068;
+    font-size: 3rem;
+}
+.housePicsSection img {
+    width: 300px;
+    filter: brightness(50%);
+    box-shadow: 0 3px 5px rgba(0,0,0,.3);
+
+}
+#img_1{
+    margin-top: 30px;
+  
+}
+#img_2{
+
+}
+#img_3{
+
+    
 }

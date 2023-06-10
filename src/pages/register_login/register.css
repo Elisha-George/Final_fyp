@@ -3,19 +3,20 @@
 
 .banner_content{
     background-image: url('../../images/register_back.png');
-    height: 100vh;
+    height: 120vh;
 
-    padding-top: 40px;
-    
+    padding-top: 40px;   
+    /* margin-bottom: 0px;  */
 }
 
 
 
 .form_element input{
     margin-bottom: 20px;
-    padding-left: 5px;
+    padding-left: 8px;
     border: none;
 }
+
 
 .form_element button{
     
@@ -173,14 +174,22 @@
 
 /* ERROR MESSAGE AND REACT CLASSES */
 
+.errorNotes{
+    width: 100%;
+    margin: auto;
+}
 .instructions {
-    font-size: 0.75rem;
+    font-size: 0.6rem;
     border-radius: 0.5rem;
-    background: #000;
-    color: #fff;
+    background: #504e4e4f;
+    color: #D04068;
     padding: 0.25rem;
     position: relative;
-    bottom: -10px;
+    bottom: 15px;
+    margin: auto;
+
+    width: 82.5%;
+    left: 6px;
 }
 
 .instructions > svg {
@@ -190,6 +199,7 @@
 .offscreen {
     position: absolute;
     left: -9999px;
+    display: none;
 }
 
 .hide {
@@ -218,5 +228,12 @@
     display: inline-block;
 }
 
+.eye_icon{
+    position: relative;
+    color: black;
+    top: 15px;
+    left: -24px;
+
+}
 
 /*============================= REGISTER ENDS ================================= */

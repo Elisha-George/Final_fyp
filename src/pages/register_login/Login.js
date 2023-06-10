@@ -37,12 +37,14 @@ export const Login = ( ) => {
           if (token) {
             setIsLoggedIn(true);
           }
+          toast.success("Login Successful");
           // Redirect or navigate to the profile page
          window.location.href = "/profile";
          
          //navigate.push("/profile");
         } else {
           setError("Invalid login credentials");
+          toast.warning("Invalid Login credentials");
         }
       })
       .catch((error) => {

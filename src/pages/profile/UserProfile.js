@@ -4,11 +4,18 @@ import "./UserProfile.css";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+import avatar from '../../images/ProfileAvatar.avif';
+
+
 export const UserProfile = () => {
   const [loading, setLoading] = useState(true);
   const [profileData, setProfileData] = useState(null);
   const [biddingData, setBiddingData] = useState(null);
   const [editMode, setEditMode] = useState(false);
+
+  const [tenData, settenData] = useState(null);
+
+
   const [formData, setFormData] = useState({
     name: "",
     cnic: "",
@@ -72,6 +79,8 @@ export const UserProfile = () => {
         if (data.status === "success") {
           setProfileData(data.profile);
           setBiddingData(data.biddingData);
+          settenData(data.tenData);
+
         } else {
           // Handle error response
         }
@@ -194,12 +203,14 @@ export const UserProfile = () => {
         <div className="container-fluid profileHeadContainer">
           <div className="row profileBackground cont">
             {profileData ? (
-              <div className="col-md-9">
-                {/* <img src={avatar} alt="" /> */}
+              <div className="col-md-9 profileUser">
+                <img src={avatar} alt="" />
+               <div className="profileUserInfo">
                 <h4 className="profileName">{profileData.name}</h4>
                 <div className="idDetails ">
                   <h5 className="profileEmail">{profileData.email}</h5>
                   <h5 className="profileCnic">{profileData.cnic}</h5>
+                </div>
                 </div>
 
                 <div className="profileButtons">
@@ -286,16 +297,7 @@ export const UserProfile = () => {
                   </a>
                 </li>
 
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    role="tab"
-                    data-toggle="tab"
-                    href="#pridectRent"
-                  >
-                    Pridict Rent
-                  </a>
-                </li>
+                
               </ul>
 
               <div className="tab-content tab_content ">
@@ -509,36 +511,33 @@ export const UserProfile = () => {
                   className="row tab-pane row_dash"
                   id="yourBids"
                   role="tabpanel"
-                >      {biddingData && !loading && (
+                >      {tenData && !loading && (
                     <table class="col-md-12 table tble_bid">
                       <thead class="thead-dark">
                         <tr>
-                          <th scope="col">Name</th>
+                          <th scope="col">Title</th>
+                          <th scope="col">Amount</th>
                           <th scope="col">Property</th>
-                          <th scope="col">Bid Amount</th>
                           <th scope="col">Status</th>
+                          <th scope="col">Action</th>
+
                           
                         </tr>
                       </thead>
-                      {biddingData.map((bid, index) => (
+                      {tenData.map((bid, index) => (
                         <tbody key={index}>
                           <tr>
-                            <th scope="row">{bid.name}</th>
-                            <td>{bid.title}</td>
+                            <th scope="row">{bid.title}</th>
+              
                             <td>{bid.amount}</td>
+                            <td>{bid.title}</td>
+                            <td>{bid.status}</td>
+                            {/* <td>{bid.status}</td> */}
+
                             <td>
-                            {renderButton(bid)}
+                            {/* {renderButton(bid)} */}
                             </td>
-                            {/* <td>
-                              <button
-                                type="button"
-                                class="btn btn-outline-danger"
-                                data-toggle="modal"
-                                data-target="#exampleModalCenterDelete"
-                              >
-                                Delete
-                              </button>
-                            </td> */}
+                           
                           </tr>
                         </tbody>
                       ))}
@@ -546,13 +545,7 @@ export const UserProfile = () => {
                   )}
                 </div>
 
-                <div
-                  className="row tab-pane row_dash"
-                  id="pridectRent"
-                  role="tabpanel"
-                >
-        Pridict Rent
-                </div>
+                
               </div>
             </div>
           </div>
