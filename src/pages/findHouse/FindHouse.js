@@ -11,6 +11,10 @@ export const FindHouse = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
 
+  const[SearchTerm, setSearchTerm] = useState("");
+
+
+
   useEffect(() => {
     const token = localStorage.getItem('token');
     fetch('http://localhost/FYP/profile.php', {
@@ -119,32 +123,36 @@ export const FindHouse = () => {
        
       <section className="house_Cards">
 
-
+{/* 
       <div class="container filter-bar">
   <select class="filter-select">
     <option value="">City</option>
-    <option value="option1">Option 1</option>
-    <option value="option2">Option 2</option>
-    <option value="option3">Option 3</option>
+    <option value="option1">Karachi</option>
   </select>
-  <select class="filter-select">
-    <option value="">Area</option>
-    <option value="option1">Option 1</option>
-    <option value="option2">Option 2</option>
-    <option value="option3">Option 3</option>
-  </select>
+  
   <input type="text" class="filter-input" placeholder="Bedrooms"/>
   <input type="text" class="filter-input" placeholder="Bathrooms"/>
   <button class="filter-submit">Submit</button>
-</div>
+</div> */}
 
 
         <div className="container">
+
+        <h3 className='text-center'>Properties For You</h3>
        
            
          
           <div className="row row_cards">
              {/* Render fetched data in your cards */}
+             {/* {
+             house.title
+              .filter((val) => {
+                if(SearchTerm == "")
+                {
+                  return val
+                }
+              }) 
+             } */}
              {uniqueHouses.map(house => (
               
               <div key={house.id} className="col-md-3 col-sm-6 col_cards">

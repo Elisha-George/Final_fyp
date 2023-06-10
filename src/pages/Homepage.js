@@ -82,7 +82,7 @@ const Homepage = () => {
           </div>
 
           {/* ============================ SEARCH BAR ======  =============================== */}
-          <div className="search-bar">
+          {/* <div className="search-bar">
   <form>
     <div className="input-group seach_input_group">
       <select className='search_select' name="city" id="city-select">
@@ -102,7 +102,7 @@ const Homepage = () => {
       <button className='sarch_bar_button' type="submit">Search</button>
     </div>
   </form>
-</div>
+</div> */}
           {/* ============================ SEARCH BAR ===================================== */}
             
           </div>
