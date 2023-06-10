@@ -1,0 +1,501 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+/* New Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif ;
+}
+
+.banner{   
+	background: linear-gradient(rgba(0, 0, 0, 0.425),rgba(0,0,0,1)),url("../images/banner_img.jpg") no-repeat center;	
+	background-size: cover;
+	height: 600px;	
+    color: white;
+    background-attachment: fixed;
+}
+.banner img{
+   
+    margin-top: 3rem;
+    height: 7rem;
+    width: 11rem;
+}
+#img_1{
+  display: none;
+}
+.banner h2{
+  font-family: 'Roboto Slab', serif;
+    font-size: 50px;
+    font-weight: 600;
+   margin: -4rem 0rem 0rem 2rem;
+   padding-bottom: 15px;  
+   color: white;
+}
+.bannerline{
+    border-bottom: 3px solid #D04068;
+    width: 50%;
+    margin-left: 3rem;
+    font-family: 'Roboto Slab', serif;
+}
+.banner p{
+    margin-top: 2rem;
+    width: 50%;
+    margin-left: 2rem;
+}
+.MainHeading{
+    margin-top: 50px;
+    text-align: center; 
+    padding: 0;  
+    margin-bottom: 80px;
+    font-family: 'Roboto Slab', serif;
+}
+.MainHeading h1{
+    font-size: 40px;
+    font-weight: 600;
+  color: black;
+    
+    font-family: 'Poppins', sans-serif ;
+  
+    
+}
+.address{
+  color: #f5c518;
+  text-decoration: underline;
+}
+
+.AboutBorder {
+  
+  background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.7)), url("../images/aboutUsBackground.avif");
+
+  /* background: url("../images/aboutUsBackground.avif"); */
+
+  background-attachment: fixed;
+
+  background-size: cover;
+  margin-top: 0px;
+}
+.MainHeading hr{
+
+  height: 1px;
+  background-color: #cc6b87;
+  width: 20%;
+  margin: auto;
+}
+.MainHeading h5{
+    /* font-size: 15px; */
+    font-weight: 600;
+    font-family: 'Poppins';
+   
+   
+    padding-bottom: 10px;
+    margin-left:auto;
+    margin-right: auto;
+    color: #6F6D6B;
+    border-radius: 1px;
+}
+.AboutUsBody img{
+    height: 70vh;
+    width: 100%;  
+    box-shadow: 0 7px 14px rgb(0, 0, 0)
+}
+.AboutUsBody p{
+    margin: 5rem 0rem 0rem 3rem;
+    font-size: 40px;
+    font-family:'Corinthia';
+}
+.OurStory{
+    line-height: 30px;
+    font-weight: 500;
+    /* background-color: rgb(205, 171, 171); */
+   margin-top: 50px;
+   
+}
+.OurStory h2{
+    font-weight: bold;
+    color: #D04068;
+}
+.OurStory a{
+    text-decoration: none;
+    color: #6F6D6B
+}
+.AboutImg2{
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
+.AboutBorder{
+    border-bottom: 3px solid #D04068;
+}
+
+
+  /* ======================SEARCH BAR======================================= */
+
+  .search-bar {
+    background: #949191;
+    padding: 10px;
+    width: 100%;
+    max-width: 55%;
+    margin-left: 15px;
+    border: 1px solid #D04068;
+   
+    text-align: center;
+  }
+  
+  .seach_input_group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .search_select {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid white;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    width: 150px;
+    background-color: #949191;
+    color: white;
+  }
+  
+  .sarch_bar_button {
+    padding: 10px 20px;
+    background-color: #D04068;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .sarch_bar_button:hover {
+    background-color: #9f3150;
+  }
+  
+  /* Responsive styles */
+  @media screen and (min-width: 320px) and (max-width: 767px){
+    .input-group {
+      flex-direction: column;
+    }
+  
+    .search_select {
+      margin-bottom: 10px;
+      width: 100%;
+      margin: auto;
+    }
+  
+    .sarch_bar_button {
+      width: 100%;
+    }
+  }
+
+
+  /* ======================= SEARCH BAR====================================== */
+
+
+
+/* ======================Our Success================================================= */
+
+
+/* ----------------------------FUN FACTS CSS------------------------ */
+.success_heading{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 40px;
+  color: white;
+ 
+  
+}
+.success_head{
+  background-color: #D04068;
+  margin-bottom: -10px;
+
+  
+}
+.success_head p{
+  color: white;
+}
+
+
+.funfacts{
+  height: 13rem;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.keyboard, .freelancer{
+  display: flex;
+  flex-direction: column;
+}
+
+.fa-keyboard, .fa-briefcase{
+  font-size: 60px;
+  color: white;
+}
+.project h3{
+  
+  font-size: 50px;
+  color: white;
+
+}
+.award h3{
+     
+  font-size: 50px;
+  color: white;
+  font-weight: bold;
+
+}
+.facts_description{
+  font-size: 25px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color:white;
+}
+
+/* ======================Our Success================================================= */
+
+/* ======================PROPERTY BANNER============================================ */
+
+/* ---------------------------------WORK BANNER----------------------------- */
+
+.work_banner_background{
+  background-image: url('../images/work_banner.jpg');
+  height: 17rem;
+  background-size: cover;
+  background-attachment: fixed;
+
+}
+
+.work_content h4 ,h1{
+  color: white;
+  word-wrap: break-word;
+}
+.work_banner_background{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.bannerButton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+.work_content h4{
+
+  font-size: 1.5rem;
+}
+
+.work_content h1{
+
+  color: white;
+  font-size: 2.3rem;
+  margin-top: 20px;
+  margin-bottom:20px;
+}
+.btn-work{
+  width: 11rem;
+  height: 3.5rem;
+  border-radius: 100px;
+}
+
+.bannerButton button{
+  font-size: 1.3rem;
+  color: white;
+}
+
+/* ======================PROPERTY BANNER============================================ */
+
+
+
+
+
+/* ======================TESTIMONALS============================================ */
+
+.testimonial-section h1,h5{
+  color: black;
+  font-weight: 600;
+}
+
+.testimonial-section hr{
+  height: 1px;
+  background-color: #cc6b87;
+  width: 15%;
+  margin: auto;
+  margin-bottom: 20px;
+  
+}
+
+
+.testimonial-section {
+  background-color: #f5f5f5;
+  padding: 40px 0;
+  text-align: center;
+}
+.testimonial-section h5{
+  color: #cc6b87;
+  line-height: 1px;
+  margin-bottom: 50px;
+}
+
+.testimonial-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.testimonial-card {
+  width: 300px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.testimonial-image img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+}
+
+.testimonial-name {
+ 
+font-size: 18px;
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+.testimonial-rating {
+display: flex;
+justify-content: center;
+margin-bottom: 10px;
+color: #f5c518;
+}
+
+.star {
+font-size: 18px;
+}
+
+.testimonial-comment {
+font-size: 14px;
+line-height: 1.5;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+.testimonial-card {
+width: 100%;
+max-width: 400px;
+}
+}
+/* ===============================TESTIMONIALS============= */
+
+  /* ============================newletter====================== */
+
+
+  .newsLetter_heading{
+    margin-top: 30px;
+    color: black; 
+    font-family:'Corinthia';
+    font-size: 50px;
+    font-weight: 900;
+  }
+
+  .newsletter-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .newsletter-input {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    font-size: 14px;
+  }
+  
+  .newsletter-button {
+    padding: 10px 20px;
+    background-color:#9f3150;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .newsletter-button:hover {
+    background-color: #a03251;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .newsletter-input {
+      width: 60%;
+    }
+  
+    .newsletter-button {
+      padding: 10px 15px;
+    }
+  }
+  
+
+/* .footerCol3 input{
+    font-size: 13px;
+    background-color: #D9D9D9;
+    width: 100px;
+}
+.footerCol3 button{
+    font-size: 13px;
+    border-radius: 0;
+    background-color: #D04068;
+    color: white;
+}
+.NewsForm{
+    margin-top: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+}
+.NewsForm input{
+    padding: 10px;
+}
+.NewsForm button{
+    padding: 10px;
+} */
+
+/* Responsiveness */
+/* Mobile */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  /* Styles for mobile devices */
+  .banner p{
+    width: 80%;
+  }
+  .banner h2{
+    font-size: 45px;
+  }
+  .AboutUsBody p{
+    margin-left: 1px;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* CSS rules for tablet */
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  /* CSS rules for desktop */
+}

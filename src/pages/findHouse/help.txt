@@ -1,0 +1,47 @@
+<div className="first_dropdown_row">
+
+                            {/* Second Dropdown */}
+
+
+                            <div class="dropdown">
+                                <a class="btn btn-lg btn-secondary dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                                    Dropdown link
+                                </a>
+
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+
+                            {/* Second Dropdown */}
+
+                            <div class="dropdown">
+                                <a class="btn btn-lg btn-secondary dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                                    Dropdown link
+                                </a>
+
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+
+
+                            {/* Third Dropdown */}
+
+
+                            <div class="dropdown">
+                                <a class="btn btn-lg btn-secondary dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                                    Dropdown link
+                                </a>
+
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                        </div>

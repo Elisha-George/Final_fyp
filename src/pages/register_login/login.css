@@ -1,0 +1,178 @@
+
+/*============================= REGISTER STARTS ================================= */
+
+.banner_content{
+    background-image: url('../../images/register_back.png');
+    height: 100vh;
+
+    padding-top: 40px;
+    
+}
+
+
+.form_element input{
+    margin-bottom: 20px;
+    padding-left: 5px;
+    border: none;
+}
+
+.form_element button{
+    
+    margin-bottom: 20px;
+    border: none;
+    font-size: 1.4rem;
+   font-weight: 500;
+   color: white;
+}
+.right_logo{
+    display: flex;
+ 
+   
+
+
+}
+/* .right_logo h4{
+    margin-top: 40px;
+    text-decoration: underline;
+} */
+.logo_register{
+    height: 7rem;
+}
+
+.left_register_col{
+    background-color: #DFE7E5;
+    
+    
+}
+.left_register_col h1{
+
+    /* Imported text link is in index.html file */
+    font-family: 'Cookie';
+    font-size: 3.5rem;
+    color: #D04068;
+    text-shadow: #D04068  1px 0 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+.right_register_col{
+    background-color: #f2255f79;
+    border: 3px solid white;
+    
+
+    
+}
+
+.form_element{
+    display: flex;
+    justify-content: center ;
+}
+.form_element input{
+   
+    flex-basis: 23rem;
+    height: 45px;
+    border-radius: 4px;
+}
+
+.form_element button{
+   margin-top: 20px;
+   flex-basis: 23rem;
+   height: 50px;
+   background-color: #D04068;
+   border-radius: 4px;
+   font-size: 1.4;
+
+}
+.below_input{
+    display: flex;
+    justify-content: right;
+    margin-right: 38px;
+
+    margin-bottom: 20px;
+}
+.banner_content{
+    display: flex;
+}
+
+.right_logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+.right_logo h2{
+    color: white;
+    font-family: 'cookie';
+    text-decoration: underline;
+    text-shadow: #efefef  1px 0 34px;
+}
+
+.right_center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.right_center h2, h5{
+    color: white;
+ 
+}
+
+.right_button{
+    /* margin-top: 30px;
+   flex-basis: 23rem;
+   height: 50px;
+   background-color: #D04068;
+   border-radius: 4px;   */
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+}
+
+.right_button button{
+    width: 18rem;
+   height: 50px;
+   border-radius: 100px;
+   background-color: #D04068;
+   border: none;
+   font-size: 1.4rem;
+   font-weight: 500;
+   color: white;
+
+}
+
+.right_foot{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+.right_foot h1{
+    font-family: 'Cookie';
+    color: white;
+    
+}
+
+.google_signup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.google_signup a{
+    text-decoration: none;
+
+}
+.right_button button{
+    margin-top: 20px;
+}
+.eye_icon{
+    position: absolute;
+    left: 390px;
+    opacity: 0.7;
+    top: 185px;
+    cursor: pointer;
+}
+/*============================= REGISTER ENDS ================================= */

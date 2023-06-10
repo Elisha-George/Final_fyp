@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Kaisei+Tokumin:wght@400;500;700;800&family=Montserrat:wght@500&family=Poppins:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Corinthia:wght@700&family=Kaisei+Tokumin:wght@400;500;700;800&family=Montserrat:wght@500&family=Poppins:wght@300;400;500;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition:all .2s cubic-bezier(.34,1.12,.68,1.31);
+}
+
+.PropertyDetail{
+    color: #526174;
+    font-weight: 500;
+}
+.sizeft{
+    color: #D04068;
+}
+.Searchbtn{
+    font-size: 12px;
+    padding: 8px 10px 8px 10px;
+    background-color:#526174 ;
+    border: none;
+    color: #F1F1F1;
+    border-radius: 5px;
+    position: relative;
+    left: 45px;
+    top: 90px;
+}
+form h4{
+    text-align: center;
+    color: #526174;
+}
+form h4 span{
+    color: #D04068;
+}
+.PropertyDetailName{
+    font-size: 10px;
+}
+.PropertyPrice{
+    color: red;
+}
+.PropertyLocationDate{
+    font-weight: 400;
+    font-size: 14px;
+    position: relative;
+    left: 100px;
+}
+.PropertyLocationDate span{
+    color: gray;
+}
+.PropertyLocation p{
+    color: #526174;
+    font-size: 13px;
+    font-weight: 500;
+}
+.PropertyLocation i{
+    margin-right:10px;
+    color: red;
+}
+.PropertyDesc{
+    font-weight: 400;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-top: 100px;
+}
+.PropertyDesc h6{
+    color: #D04068;
+    font-weight: 400;
+}
+.BedroomIcon i{
+    padding-right: 7px;
+    color: #526174;
+}
+.BedroomIcon {
+    font-size: 14px;
+    color: #D04068;
+}
+.ShowerIcon i{
+    padding-left: 20px;
+    padding-right: 7px;
+    color: #526174;
+}
+.ShowerIcon {
+    font-size: 14px;
+    color: #D04068;
+}
+.PropertyRecom{
+    color: #D04068;
+}
+.SideProfileInfo{
+    border: 2px solid #D04068;
+    position: relative;
+    left: 60px;
+    top: -15px;
+}
+.SideProfileInfo input{
+  border: 0.3px solid #55555598;
+  
+}
+.locationtext{
+    color: #526174;
+    font-size: 18px;
+    font-weight: 400;
+}
+.propertydisplay {
+    text-transform: capitalize;
+  }
+  
+.fa-map-marker-alt:before {
+    content: "\f3c5";
+    margin-left: 1rem;
+}
+/* .form-group{
+    padding: 17px 0px 12px 0px;
+    color: #6C6161;
+}
+.form-group input, textarea.form-control{
+    background-color: #D9D9D9;
+    border: none;
+}
+.formbtn{
+    margin-top: 10px;
+    width: 100%;
+    padding: 8px 0px 8px 0px;
+    border: none;
+    color: white;
+    background-color: #D04068;
+    border-radius: 5px;   
+} */
+.image-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  
+.image{
+    height:220px;
+    width: 370px;
+    overflow: hidden;
+   object-fit: fill;
+    box-shadow: 0 3px 5px rgba(0,0,0,.3);
+    /* margin: 2px; */
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    margin-bottom: 25px;
+    /* justify-content: space-around; */
+}
+.img_row{
+  display: flex;
+  justify-content: space-between;
+}
+.gallery .image-container .image:hover img{
+    transform: scale(1.4);
+}
+/* Style for the popup overlay */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+   
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+  
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+  }
+  
+  .blur-background {
+    filter: blur(5px);
+  }
+
+  .popup-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    transition: background-color 0.2s ease;
+  }
+  
+  .popup-arrow:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .popup-arrow.left {
+    left: 10px;
+  }
+  
+  .popup-arrow.right {
+    right: 10px;
+  }
+  
+  .popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    transition: background-color 0.2s ease;
+  }
+  
+  .popup-close:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+
+  /* --------------------------------------- */
+  .popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .popup-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .popup-content p {
+    margin-bottom: 20px;
+  }
+  
+  .popup-content button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .popup-content button:hover {
+    background-color: #555;
+  }
+
+
+
+  /* ==================================================RATING COMPONENT ================================================================ */
+  .ratingRadio{
+    display: none;
+  }
+  FaStar{
+    display: block;
+  }
+  .ratingComponent{
+    position: relative;
+    bottom: 1168px;
+    /* left: 560px; */
+    margin-left: 550px;
+    display: flex;
+    
+  }
+  .raitingHead{
+    margin-left: 15px;
+    color: #D04068;
+    font-size: 1rem;
+    margin-top: 4px;
+  }
+
+  .PropertyDetail p{
+    color: #D04068;
+  }
+  .bidButtons{
+    display: flex;
+
+    justify-content: space-around;
+
+  }
+  .btn_sendMail{
+    width: 90px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 0.7rem;
+    background-color: #D04068;
+    color: white;
+  }
+  .btn_negociation{
+    
+
+    font-size: 0.7rem;
+    background-color: #D04068;
+    color: white;
+  }
+.p_postedOn{
+  color: #D04068;
+  margin-top: -60px;
+  font-weight: lighter;
+}
+.p_house_des
+{
+  color: rgb(88, 88, 88);
+}
+.city_title{
+  color: #D04068;
+  font-weight: 400;
+}
+ul{
+  list-style-type: square;
+}
+.keyFeatures{
+  color: #D04068;
+}
+.basic_neccessaties{
+  height: 300px;
+}
+.basic_features{
+  display: flex;
+  justify-content: space-between;
+  
+}
+.basic_features p{
+ 
+  padding: 14px;
+  box-shadow: rgba(100, 99, 99, 0.24) 0px 3px 8px;
+  /* width: 0px; */
+  width: 200px;
+  height: 90px;
+  border: 2px solid rgb(223, 219, 219);
+  /* background-color: #d040695b; */
+
+}
+
+  /* ==================================================RATING COMPONENT ================================================================ */
+
+
+
+/* ==================================================REVIEW COMPONENT ================================================================ */
+.reviewTitle{
+  color: #555;
+  margin-top: -50px;
+}
+
+ /* ==================================================REVIEW  COMPONENT ================================================================ */
+
+
+  
+  

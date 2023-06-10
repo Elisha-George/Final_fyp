@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Kaisei+Tokumin:wght@400;500;700;800&family=Montserrat:wght@500&family=Poppins:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Corinthia:wght@700&family=Kaisei+Tokumin:wght@400;500;700;800&family=Montserrat:wght@500&family=Poppins:wght@300;400;500;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.about{
+    background-color: rgb(231, 226, 226);
+}
+
+
+.about_hero img{
+
+    background-size: cover;
+
+    width: 400px;
+    height: 80vh;
+    margin-top: 40px;
+    opacity:1;
+    filter: brightness(0.5);
+
+}
+
+.about_para
+{
+    margin-top: 120px;
+    width: 80%;
+    color: black;
+    
+}
+
+.about_heading{
+    position: relative;
+    font-size: 90px;
+    top: 90px;
+    right: 180px;
+    font-weight: 400;
+}

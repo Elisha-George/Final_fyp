@@ -1,0 +1,144 @@
+.profileBackground{background: linear-gradient(rgba(0, 0, 0, 0.425),rgba(0,0,0,1)),url("../../images/banner_img.jpg") no-repeat center;	
+    height: 140px;
+    display: flex;
+    justify-content: left;
+    border-bottom: 2px solid black;
+}
+.profileBackground img {
+    width: 170px;
+    height: 170px;
+    position: relative;
+    top: 60px;
+    left: 50px;
+}
+.profileName{
+    position: relative;
+    top: 87px;
+    left: 50px;
+    font-size: 2.4rem;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+.idDetails{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 100px;
+    right: 165px;
+    height: 100px;
+    margin-left: 220px;
+    
+}
+.profileCnic, .profileEmail{
+   
+    /* font-size: 2.4rem; */
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    font-size: 1.2rem;
+
+}
+
+.nav-tabs{
+    margin-top: 50px;
+}
+
+.dashsection{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+}
+.dashItems{
+    height: 240px;
+    width: 400px;
+    background-color: brown;
+    margin-right: 30px;
+    border-radius: 8px;
+
+}
+#bid{
+ 
+    background-color: rgba(0, 0, 255, 0.603);
+}
+#req{
+    background-color: rgba(0, 128, 0, 0.747);
+}
+#Amt{
+    background-color: rgba(196, 2, 2, 0.822);  
+}
+
+.totalBids, .totalReq, .totalAmt{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+
+.dashItems h3{
+    color: white;
+    font-weight: 500;
+}
+
+.row_bidDetails{
+    margin-bottom: 30px;
+}
+.bid_detilHead{
+    font-weight:500;
+    color: black;
+}
+.modal-header{
+    background-color: #8d2e49c7;
+
+}
+.modal-header h4{
+    color: white;
+    
+}
+.modal-footer{
+    background-color: rgba(128, 128, 128, 0.178);
+}
+.model_deleteHead{
+    background-color: white;
+}
+
+.model_deleteHead h5{
+    color: black;
+}
+.modal_delFooter
+{
+    background-color: white;
+}
+.btn_edit {
+    font-size: 0.7rem;
+    width: 70px;
+    background-color: #8d2e49c7;
+    border: none;
+
+    
+}
+.btn_logout{
+    font-size: 0.7rem;
+    width: 70px;
+    background-color: #8d2e49c7;
+    border: none;
+    margin-left: 10px;
+
+}
+.profileButtons{
+    position: relative;
+    top: 70px;
+    left: 50px;
+    
+}
+.dashboardSection
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;align-items: flex-start;
+    
+}
+.nav-tabs{
+    width: 100%;
+}
+.tab_content{
+    width: 100%;
+}

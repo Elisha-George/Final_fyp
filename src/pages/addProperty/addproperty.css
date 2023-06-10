@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Kaisei+Tokumin:wght@400;500;700;800&family=Montserrat:wght@500&family=Poppins:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Corinthia:wght@700&family=Kaisei+Tokumin:wght@400;500;700;800&family=Montserrat:wght@500&family=Poppins:wght@300;400;500;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition:all .2s cubic-bezier(.34,1.12,.68,1.31);
+}
+.MainHeading{
+    margin-top: 50px;
+    text-align: center;
+    padding: 0;  
+    margin-bottom: 80px;
+    display: block;
+}
+.MainHeading h1{
+    font-size: 40px;
+    font-weight: 800;
+    font-family: 'Poppins';
+    
+}
+.MainHeading p{
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Poppins';
+    border-bottom: 3px solid #D04068;
+    width: 13rem;
+    padding-bottom: 10px;
+    margin-left:auto;
+    margin-right: auto;
+    color: #6F6D6B;
+    border-radius: 1px;
+}
+
+.progressbar-wrapper {
+    background: #fff;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    display: block;
+}
+.progressbar li {
+    list-style-type: none;
+    width: 16%;
+    float: left;
+    font-size: 12px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    color: #7d7d7d;
+}
+
+.progressbar li:before {
+    width: 60px;
+    height: 60px;
+    content: "";
+    line-height: 60px;
+    border: 2px solid #7d7d7d;
+    display: block;
+    text-align: center;
+    margin: 0 auto 3px auto;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    background-color: #fff;
+}
+.progressbar li:after {
+     width: 100%;
+     height: 2px;
+     content: '';
+     position: absolute;
+     background-color: #7d7d7d;
+     top: 30px;
+     left: -50%;
+     z-index: 0;
+}
+.progressbar li:first-child:after {
+     content: none;
+}
+.progressbar li.active {
+    color: #D04068;
+    font-weight: bold;  
+}
+.progressbar li.active:before {
+    border-color: #D04068;
+    background: #D04068;
+ }
+.progressbar li.active + li:after {
+    background-color: #D04068;
+}
+.progressbar li.active:before {
+    /* background: #D04068  url("../images/tick.png") no-repeat center center; */
+    background-size: 60%;
+}
+.progressbar li::before {
+    /* background: #fff url("../images/tick.png") no-repeat center center; */
+    background-size: 60%;
+}
+.progressbar {
+    counter-reset: step;
+}
+.progressbar li:before {
+    content: counter(step);
+    counter-increment: step; 
+}
+
+
+/* ---------------------------------------------------------- */
+.PropertyType{
+    margin-top: 5rem;
+    color: #D04068;
+}
+.PropertyType h4{
+    font-weight: 800;
+}
+/* ------------------------options------------------------- */
+.radio-buttons {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.custom-radio input {
+    display: none;
+}
+.radio-btn {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    margin: 30px;
+    border: 4px solid #D9D9D9;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.radio-btn .content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    float: right;
+}
+.radio-btn h2{
+    padding-top: 35px;
+    padding-left: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.radio-btn h2 {
+    color: #cf1d8b;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.radio-btn .skill {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #c3c2c7;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+.radio-btn .check-icon {
+    width: 30px;
+    height: 30px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.radio-btn .check-icon .icon {
+    display: inline-block;
+    position: relative;
+    width: 18px;
+    height: 8px;
+    margin-top: -2px;
+    transform: rotate(-40deg);
+}
+.radio-btn .check-icon .icon::before {
+    content: "";
+    width: 3px;
+    height: 100%;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 10px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.231);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: all 0.2s ease-in-out;
+}
+.radio-btn .check-icon .icon::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 10px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.231);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.2s ease-in-out;
+    transition-delay: 0.1s;
+}
+.custom-radio input:checked + .radio-btn {
+    border: 4px solid #D04068;
+}
+.custom-radio input:checked + .radio-btn .check-icon {
+    background-color: #D04068;
+}
+.custom-radio input:checked + .radio-btn .check-icon .icon::before,
+.custom-radio input:checked + .radio-btn .check-icon .icon::after {
+    transform: scale(1);
+}
+/* ---------------buttons-------------------------- */
+
+.PrevNext{
+    margin-top: 30px;
+    justify-content: space-between;
+    background-color: #D9D9D9;
+    padding: 10px 18px;
+    display: block;
+}
+.PrevNext a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: 2px solid #D04068;
+}
+.PrevNext a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.previous {
+    background-color: #f1f1f1;
+    color: black;
+}
+.next {
+    background-color: #D04068;
+    color: white;
+    float: right;
+}
+
+
+
+/* ---------------------2--------------------- */
+.PropertySubfeatures select{
+    width: 150px;
+    border-color: #ddd;
+    padding: 5px 13px;
+    border-radius: 5px;   
+}
+.selectHolders{
+    color: #c3c2c7;
+}
+.PropertySubfeatures label{
+    display: inline-block;
+    width: 125px;
+}
+
+.carparking{
+    display: flex;
+    justify-content:end;
+   
+}
+.bedroom{
+    display: flex;
+    justify-content:center;
+}
+.PropertySubfeatures span{
+    color: #cf1d8b;
+}
