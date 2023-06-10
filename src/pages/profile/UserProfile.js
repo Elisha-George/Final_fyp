@@ -217,53 +217,60 @@ export const UserProfile = () => {
                   <button
                     type="button"
                     class="btn_edit btn btn-info"
+                    data-toggle="modal"
+                   data-target="#id_modalEdit"
                     onClick={handleEdit}
+                    
                   >
                     Edit
                   </button>
-                  <button type="button" class="btn_logout btn btn-info">
+                  {/* <button type="button" class="btn_logout btn btn-info">
                     Logout
-                  </button>
+                  </button> */}
                 </div>
               </div>
             ) : (
               <p>Loading...</p>
             )}
 
-            {editMode && (
-              <div className="col-md-9 personal_info">
-                <h3 className="porfile_heading">Edit Profile</h3>
-                <form onSubmit={handleSave}>
-                  <label htmlFor="name">Name:</label>
-                  <input
-                    type="text"
-                    id="name"
-                    value={formData.name}
-                    onChange={(e) =>
-                      setFormData({ ...formData, name: e.target.value })
-                    }
-                  />
-
-                  <label htmlFor="cnic">CNIC:</label>
-                  <input
-                    type="text"
-                    id="cnic"
-                    value={formData.cnic}
-                    onChange={(e) =>
-                      setFormData({ ...formData, cnic: e.target.value })
-                    }
-                  />
-
-                  <div>
-                    <button type="submit">Save</button>
-                    <button type="button" onClick={() => setEditMode(false)}>
-                      Cancel
-                    </button>
-                  </div>
+      {/* //POPUP SCREEN FOR EDITING PROFILE INFORMATION */}
+{editMode && (
+    <div class="modal fade model_payment" id="id_modalEdit" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title " id="exampleModalCenterTitle">PROFILE INFORMATION</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-6 form_payment">
+                            <label for="name">Email</label>
+                            <input type="text" class="form-control" id="name" value={formData.name} onChange={(e) =>
+                                setFormData({ ...formData, name: e.target.value })
+                              }/>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="cnic">Cnic</label>
+                            <input type="text" class="form-control" value={formData.cnic} id="cnic" onChange={(e) =>
+                                setFormData({ ...formData, name: e.target.value })}/>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-lg btn-block btn_pay">Edit Details</button>
                 </form>
-              </div>
-            )}
-
+            </div>
+            <div class="modal-footer paymnet_modal_footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success">Approve</button>
+            </div>
+        </div>
+    </div>
+</div>
+)}
             <div className="container-fluid dashboardSection mt-5">
               <ul class="nav nav-tabs justify-content-center">
                 <li class="nav-item">

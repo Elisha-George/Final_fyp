@@ -132,8 +132,9 @@
 }
 .profileButtons{
     position: relative;
-    top: 70px;
-    left: 50px;
+    top: 220px;
+    right: 320px;
+    /* left: 450px; */
     
 }
 .dashboardSection
