@@ -8,6 +8,9 @@ export const FindHouse = () => {
   const [houses, setHouses] = useState([]);
   const [userId, setUserId] = useState(null);
 
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
+
   useEffect(() => {
     const token = localStorage.getItem('token');
     fetch('http://localhost/FYP/profile.php', {
@@ -27,6 +30,24 @@ export const FindHouse = () => {
       });
   }, []);
 
+
+  useEffect(() => {
+    const getHouses = async () => {
+      const res = await fetch(`http://localhost/FYP/API/houses.php?page=${currentPage}`);
+      const data = await res.json();
+      if (data.status === 'success') {
+        setHouses(data.houses);
+        setTotalPages(data.totalPages);
+      } else {
+        console.error('Error fetching houses:', data.message);
+      }
+    };
+    getHouses();
+  }, [currentPage]);
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
 
   useEffect(() => {
     const getHouse = async ()=>{
@@ -95,7 +116,29 @@ export const FindHouse = () => {
 
   return (
     <Layout>
+       
       <section className="house_Cards">
+
+
+      <div class="container filter-bar">
+  <select class="filter-select">
+    <option value="">City</option>
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+    <option value="option3">Option 3</option>
+  </select>
+  <select class="filter-select">
+    <option value="">Area</option>
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+    <option value="option3">Option 3</option>
+  </select>
+  <input type="text" class="filter-input" placeholder="Bedrooms"/>
+  <input type="text" class="filter-input" placeholder="Bathrooms"/>
+  <button class="filter-submit">Submit</button>
+</div>
+
+
         <div className="container">
        
            
@@ -104,21 +147,23 @@ export const FindHouse = () => {
              {/* Render fetched data in your cards */}
              {uniqueHouses.map(house => (
               
-              <div key={house.id} className="col-md-3 col_cards">
+              <div key={house.id} className="col-md-3 col-sm-6 col_cards">
                 <div className="card">
                 <img src={`http://localhost/FYP/API/uploads/${house.image}`} alt={house.id} />
                   <div className="card-body">
                     <h6 className="price">PKR. {house.price}</h6>
                     <hr className='card_line'/>
                     <p className="card-text details">{house.title},{house.city}</p>
-                    
+                    <di className="homeIcons">
                     <span class="BedroomIcon"><i class="fa fa-bed" aria-hidden="true"></i>{house.beds}</span> <span class="ShowerIcon"> <i class="fa fa-bath" aria-hidden="true"></i>{house.bathrooms}</span>
+                    </di>
+                   
                     <p className="posted_time mb-4">{getTimeAgo(house.datePosted)}</p> {/* Display time ago information */}
                     <Link className="btn_card btn btn-primary" to={`/HouseDetails/${house.property_id}`}>
                     Details
                   </Link>
                 {userId && Number(house.user_id) === Number(userId) && (
-                    <button className="btn_del btn btn-danger"  onClick={() => deleteProperty(house.property_id)}>
+                    <button className="btn_del btn btn-danger "  onClick={() => deleteProperty(house.property_id)}>
                       Delete
                     </button>
                   )}
@@ -129,6 +174,45 @@ export const FindHouse = () => {
               </div>
               ))} 
           </div> 
+
+          
+          <div className="pagination_forCards">
+            <nav aria-label="Page navigation example">
+              <ul className="pagination justify-content-center">
+                <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}>
+                  <button
+                    className="page-link pagination_links"
+                    onClick={() => handlePageChange(currentPage - 1)}
+                    disabled={currentPage === 1}
+                  >
+                    Previous
+                  </button>
+                </li>
+                {Array.from({ length: totalPages }, (_, index) => (
+                  <li
+                    key={index + 1}
+                    className={`page-item ${currentPage === index + 1 ? 'active' : ''}`}
+                  >
+                    <button
+                      className="page-link pagination_items"
+                      onClick={() => handlePageChange(index + 1)}
+                    >
+                      {index + 1}
+                    </button>
+                  </li>
+                ))}
+                <li className={`page-item ${currentPage === totalPages ? 'disabled' : ''}`}>
+                  <button
+                    className="page-link pagination_links"
+                    onClick={() => handlePageChange(currentPage + 1)}
+                    disabled={currentPage === totalPages}
+                  >
+                    Next
+                  </button>
+                </li>
+              </ul>
+            </nav>
+          </div>
 
         
 

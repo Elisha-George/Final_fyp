@@ -144,7 +144,10 @@ export const HouseDetails = () => {
 
   return (
     <Layout>
-           <section class="mt-5 propertydisplay">
+    <div className="propertyDisplayBack">
+
+    
+           <section class="pt-3 propertydisplay">
         <div class="container">
           <div class="row">
             <div class="col-md-10 PropertyDetail">
@@ -260,9 +263,9 @@ export const HouseDetails = () => {
             </div>
             <div class="col-md-4 mb-5 SideProfileInfo">
               {userId && Number(houses.user_id) === Number(userId) ? (
-                <p>You are the owner of this property.</p>
+                <p className="text-center caution">You are the owner of this property. You Can't bid here !!!</p>
               ) : (
-                <form>
+                <form >
                   <h4 class="mt-3">
                     PKR <span>{houses.price}</span>
                   </h4>
@@ -386,6 +389,7 @@ export const HouseDetails = () => {
           </div>
         </div>
       )}
+      </div>
     </Layout>
   );
 };

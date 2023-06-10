@@ -180,7 +180,7 @@ const Contact = () => {
 							<div className="col-md-5 d-flex align-items-stretch">
 								<div id="gmap_canvas" className='map_div'>
 
-								<iframe width="450" height="720" id="gmap_canvas" src="https://maps.google.com/maps?q=muhammad%20ali%20jinnah%20university&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginHeight="0" marginWidth="0"></iframe>
+								<iframe width="450" height="610" id="gmap_canvas" src="https://maps.google.com/maps?q=muhammad%20ali%20jinnah%20university&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginHeight="0" marginWidth="0"></iframe>
 								
 			          </div>
 							</div>

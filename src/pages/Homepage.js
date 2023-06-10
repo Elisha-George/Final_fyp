@@ -34,9 +34,11 @@ const Homepage = () => {
     try {
       // Send a POST request to the backend with the email
       const response = await axios.post("http://localhost/FYP/sendMail.php", { email });
-      console.log(response.data); // Assuming the backend sends a response message
+      console.log(response.data); 
+      toast.success("Email Has Successfully Registered");// Assuming the backend sends a response message
     } catch (error) {
       console.error(error);
+      toast.success("Invalid Email, Please Enter a Valid Email or Try Again");
     }
   };
 

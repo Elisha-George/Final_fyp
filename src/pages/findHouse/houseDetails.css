@@ -289,9 +289,9 @@ form h4 span{
   }
   .ratingComponent{
     position: relative;
-    bottom: 1168px;
+    bottom: 976px;
     /* left: 560px; */
-    margin-left: 550px;
+    margin-left: 950px;
     display: flex;
     
   }
@@ -367,6 +367,12 @@ ul{
   /* background-color: #d040695b; */
 
 }
+.propertyDisplayBack{
+  margin-top: 0;
+  background: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.9)), url("../../images/aboutUsBackground.avif");
+  background-size: cover;
+}
+
 
   /* ==================================================RATING COMPONENT ================================================================ */
 
