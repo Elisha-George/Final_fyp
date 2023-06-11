@@ -164,7 +164,7 @@ export const UserProfile = () => {
   const renderbtn = (ten) => {
     if (ten.status === "accepted") {
       return (
-        <Link to='/PaymentDashboard'><button type="button" className="btn btn-primary btn_pay_proceed">Proceed</button>; </Link>
+        <Link to='/PaymentDashboard'><button type="button" className="btn btn-primary btn_pay_proceed">Pay Now</button>; </Link>
       );
     } 
   }
@@ -172,7 +172,7 @@ export const UserProfile = () => {
 
   const renderButton = (bid) => {
     if (bid.status === "accepted") {
-      return  <Link to='/PaymentDashboard'><button type="button" className="btn btn-primary btn_pay_now">Pay Now</button>; </Link>
+      return  <Link to='/PaymentDashboard'><button type="button" className="btn btn-primary btn_pay_now">Proceed</button>; </Link>
     } else if (bid.status === "rejected") {
       return (
        
@@ -194,14 +194,15 @@ export const UserProfile = () => {
           {selectedBidStatus === "accepted" ? "Processing..." : "Accept"}
         </button>
         <button
-        type="button"
-        className={`btn btn-outline-danger reject_button ${selectedBidStatus === "rejected" ? "disabled-button" : ""}`}
-        onClick={() => handleBidReject(bid.bid_id)}
-        style={{ cursor: selectedBidStatus === "rejected" ? "not-allowed" : "pointer" }}
-        disabled={selectedBidStatus === "rejected"}
+          type="button"
+          className={`btn btn-primary btn_pay_now ${selectedBidStatus === "rejected" ? "disabled-button" : ""}`}
+          onClick={() => handleBidReject(bid.bid_id)}
+          style={{ cursor: selectedBidStatus === "rejected" ? "not-allowed" : "pointer" }}
+          disabled={selectedBidStatus === "rejected"}
         >
-        {selectedBidStatus === "rejected" ? "Processing..." : "reject"}
-      </button>
+          {selectedBidStatus === "rejected" ? "Processing..." : "Reject"}
+        </button>
+     
       </>
       );
     }
