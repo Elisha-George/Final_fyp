@@ -6,14 +6,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import cardImg from '../../images/banner_img.jpg'
 
 export const FilterHouse = () => {
-
-
-    
-
-
-
-
-
     return (
         <Layout>
 

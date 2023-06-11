@@ -34,6 +34,11 @@ import AddPropertyBasic from './pages/addProperty/AddPropertyBasic';
 import UserProfile from './pages/profile/UserProfile';
 
 
+//FILTER HOUSE
+
+// import FilterHouse from './pages/findHouse/FilterHouse';
+
+
 
 
 // import {AddProperty_1} from './pages/addProperty/AddProperty_1';
@@ -70,6 +75,9 @@ function App() {
         
         {/* <Route path='/HouseDetails' element={<HouseDetails />} /> */}
         <Route path='/HouseDetails/:property_id' element={<HouseDetails />} />
+
+        {/* <Route path='/FilterHouse' element={<FilterHouse />} /> */}
+
 
 
         {/* <Route path='/Profile' element={<Profile />} /> */}

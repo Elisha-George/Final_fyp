@@ -33,7 +33,13 @@
     height: 80vh;
     margin-top: 40px;
     opacity:1;
+   
     filter: brightness(0.5);
+    
+}
+.heroAboutImg{
+    box-shadow: 0 4px 6px rgba(0,0,0,0.8);
+
 }
 
 .about_para
@@ -70,18 +76,44 @@
 }
 .housePicsSection img {
     width: 300px;
-    filter: brightness(50%);
-    box-shadow: 0 3px 5px rgba(0,0,0,.3);
-
-}
-#img_1{
+    filter: brightness(90%);
+    box-shadow: 0 3px 5px rgba(0,0,0,.5);
+    border: 4px solid rgb(255, 255, 255);
     margin-top: 30px;
-  
-}
-#img_2{
+    margin-bottom: 40px;
 
 }
-#img_3{
+.house_1{
+    position: relative;
+    top: 70px;
+    right: 10px;
+}
+.house_3{
+    position: relative;
+    left: 90px;
+    top: 10px;
+}
+.aboutBottomDiv{
+    margin-bottom: 40px;
+}
+.undeline{
+    background-color: #D04068;
+    height: 1px;
+    width: 300px;
 
-    
+}
+.underlineBottom{
+    width: 20%;
+    margin: auto;
+}
+
+.underlineTop{
+    width: 40%;
+    margin: auto;
+    position: relative;
+    top: 80px;
+
+}
+.midheading{
+    margin-top: 40px;
 }

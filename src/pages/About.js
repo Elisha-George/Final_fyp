@@ -26,7 +26,7 @@ const About = () => {
                 <div className="row">
                     <div className="col-md-5 about_hero" >
 
-                        <img src={about_hero} alt=""  />
+                        <img src={about_hero} className='heroAboutImg' alt=""  />
                         {/* Img */}
                     </div>
                     <div className="col-md-7">
@@ -35,6 +35,10 @@ const About = () => {
                             <h1 className="about_heading">
                                 About Us
                             </h1>
+
+                        </div>
+                        <div className="undeline underlineTop">
+
                         </div>
                     <div className="about_para">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ipsum nesciunt similique! Exercitationem cum temporibus consequatur optio neque officia asperiores vero et quisquam eveniet rerum debitis, sed tempora sit officiis autem, consectetur dicta, cumque delectus excepturi dolorem ratione quo praesentium numquam! Omnis cum nostrum error nulla dignissimos! Distinctio, quam fugit. lorem30
@@ -44,49 +48,7 @@ const About = () => {
                 </div>
             </div>
 
- {/* <!-------------------------- MAIN HEADING END------------------------------- --> */}
-
- <div className="container midheading">
-    <div className="row midhead ">
-    <div className="col-md-12">
-    <h1 className="midtitle text-center">
-            Who We Are
-        </h1>
-    </div>
-       
-    </div>
- </div>
-
-
- <div className="container aboutDiv">
-                <div className="row">
-                    <div className="col-md-5 about_hero" >
-                    <h1 className="about_heading">
-                                About Us
-                            </h1>
-                            <div className="about_para">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ipsum nesciunt similique! Exercitationem cum temporibus consequatur optio neque officia asperiores vero et quisquam eveniet rerum debitis, sed tempora sit officiis autem, consectetur dicta, cumque delectus excepturi dolorem ratione quo praesentium numquam! Omnis cum nostrum error nulla dignissimos! Distinctio, quam fugit. lorem30
-                    </div>
-                        {/* Img */}
-                    </div>
-                    <div className="col-md-7">
-                        <div className="housePicsSection">
-                    
-                        <img src={house1} id='img_1' alt=""  />
-                        <img src={house2} id='img_2' alt=""  />
-                        <img src={house3} id='img_3' alt=""  />
-
-                        </div>
-                   
-                        {/* Text */}
-                    </div>
-                </div>
-            </div>
-
-
-       {/* <!-- ============================================= WORK BANNER START ==================================================--> */}
-
-       <section className="container-fluid work_banner">
+            <section className="container-fluid work_banner">
 
 
 <div className="container-fluid">
@@ -123,6 +85,52 @@ const About = () => {
 </div>
 
 </section>
+
+ {/* <!-------------------------- MAIN HEADING END------------------------------- --> */}
+
+ <div className="container midheading">
+    <div className="row midhead ">
+    <div className="col-md-12">
+    <h1 className="midtitle text-center">
+            Who We Are
+        </h1>
+    </div>
+
+    <div className='undeline underlineBottom'></div>
+       
+    </div>
+ </div>
+
+
+ <div className="container aboutDiv aboutBottomDiv">
+                <div className="row">
+                    <div className="col-md-5 about_hero" >
+                    <h1 className="about_heading">
+                               Rental Hub
+                            </h1>
+                            <div className="about_para">
+
+                            
+Discover a world of endless possibilities with our real estate website. We are the epitome of Dream Homes, offering a seamless experience to find your perfect property. Step into a Property Paradise where luxury meets comfort, and every house becomes a Home Haven. 
+                         </div>
+                        {/* Img */}
+                    </div>
+                    <div className="col-md-7">
+                        <div className="housePicsSection">
+                    
+<img src={house1} alt="" className="aboutBottomIMages house_1" />
+<img src={house2} alt="" className="aboutBottomIMages house_2" />
+<img src={house3} alt="" className="aboutBottomIMages house_3" />
+                        </div>
+                   
+                        {/* Text */}
+                    </div>
+                </div>
+            </div>
+
+
+       {/* <!-- ============================================= WORK BANNER START ==================================================--> */}
+
 
 {/* <!-- ================================================ WORK BANNER END  ==================================================--> */}
 

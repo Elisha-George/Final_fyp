@@ -59,11 +59,6 @@ const Header = () => {
                     </li>
                     {isLoggedIn && (
                       <li>
-                        <Link to="/Profile">Profile</Link>
-                      </li>
-                    )}
-                    {isLoggedIn && (
-                      <li>
                         <Link to="/AddPropertyBasic">Add Property</Link>
                       </li>
                     )}
