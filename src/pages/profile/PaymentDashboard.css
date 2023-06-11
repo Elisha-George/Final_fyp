@@ -1,0 +1,179 @@
+.paymentBoard{
+    background-color:white;
+    margin-bottom: 200px;
+}
+.paymnet_header{
+    height: 130px;
+    background-color:rgba(194, 194, 194, 0.199);
+    border-bottom: 2px solid rgba(70, 69, 69, 0.212);
+    
+}
+.prfileImage{
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+
+
+}
+.title{
+    font-weight: bolder;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 20px;
+    font-size: 1.4rem;
+    color: blue;
+    
+  text-shadow: 1px 1px 1px #bdbaba;
+    
+}
+.paymentHead{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.badge-success{
+    height: 14px;
+    position: relative;
+    top: 10px;
+    left: 40px;
+    font-weight: bold;
+    font-size: 0.6rem;
+    background-color:rgba(36, 231, 36, 0.719);
+}
+.rowHead_info{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+.row_info{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 50px;
+}
+.info_head{
+    margin-top: 5px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.445);
+
+}
+.info_info{
+
+    font-size: 0.8rem;
+    padding-left: 20px;
+    margin-top:1px ;
+    color: rgba(0, 0, 0, 0.650);
+    font-weight: 550;
+
+
+}
+.balanceHead{
+    margin-top: 10px;
+    border-bottom: 0.5px solid rgb(221, 220, 220);
+    display: flex;
+    justify-content: space-between;
+}
+.balanceheading{
+    margin-left: 30px;
+    font-size: 1.3rem;
+    font-weight: 500;
+   
+}
+.balanceCards{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 15px;
+
+}
+.balancecardHeads{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 50px;
+}
+.cardshead{
+    margin-top: 5px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.445);
+
+}
+.cardInfo{
+
+    font-size: 0.7rem;
+    /* padding-left: 20px; */
+    margin-top:1px ;
+    color: rgba(0, 0, 0, 0.650);
+    font-weight: 550;
+
+}
+
+.cards_div{
+    
+    margin-left: 20px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.nav-link
+{
+    font-size: 0.7rem;
+    color: grey;
+}
+.nav-link:hover{
+    color: rgb(247, 89, 186);
+    background-color    : rgb(219, 219, 219);
+}
+.paymentDashboard{
+    margin-top: -20px;
+}
+th{
+    font-size: 0.7rem;
+}
+td{
+    font-size: 0.7rem;
+}
+
+#paynow{
+    font-size: 0.9rem;
+    height: 30px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-group{
+    margin-top: -30px;
+    /* margin-bottom: -1px; */
+
+}
+
+.btn_pay{
+    margin-top: -17px;
+
+   background-color: #8d2e49c7;
+}
+.paymnet_modal_footer{
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 33px;
+}
+.paymnet_modal_footer button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7rem;
+    height: 40px;
+    width: 80px;
+}
+label{
+    color:#692438e2;
+}

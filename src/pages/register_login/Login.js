@@ -39,7 +39,7 @@ export const Login = ( ) => {
           }
           toast.success("Login Successful");
           // Redirect or navigate to the profile page
-         window.location.href = "/profile";
+         window.location.href = "/UserProfile";
          
          //navigate.push("/profile");
         } else {

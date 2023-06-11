@@ -162,8 +162,12 @@
 .card{
   width: 16rem;
   padding:10px;
-  border: 1px solid #D04068;
+  /* border: 1px solid #D04068; */
   height: 450px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+
+  
   
 }
 .btn_card{
@@ -174,6 +178,11 @@
   top: 400px;
   background-color: #D04068;
   border: none;
+}
+.card img{
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
 }
 .btn_del
 {

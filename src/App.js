@@ -34,6 +34,8 @@ import AddPropertyBasic from './pages/addProperty/AddPropertyBasic';
 import UserProfile from './pages/profile/UserProfile';
 
 
+import PaymentDashboard from './pages/profile/PaymentDashboard';
+
 //FILTER HOUSE
 
 // import FilterHouse from './pages/findHouse/FilterHouse';
@@ -91,6 +93,10 @@ function App() {
         <Route path='/AddPropertAddress' element={<AddPropertAddress />} />
 
         <Route path='/UserProfile' element={<UserProfile />} />
+
+        <Route path='/PaymentDashboard' element={<PaymentDashboard />} />
+
+        
 
         
 

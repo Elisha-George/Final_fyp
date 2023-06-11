@@ -8253,6 +8253,7 @@ color: white;}
     border-left: 1px solid;
   padding: 10px;
   box-shadow:-7px 5px 20px #888888;
+  height: 99%;
   }
 
    
@@ -8322,7 +8323,11 @@ color: white;}
     color: white;
     text-transform: capitalize;
     font-size: 16px;
-    font-weight: 370; }
+    font-weight: 370;
+  }
+  .contact_group{
+    padding-bottom: 40px;
+  }
   
   .contactForm .form-control {
     border: none; }

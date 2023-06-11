@@ -57,6 +57,8 @@ const Header = () => {
                     <li>
                       <Link to="/Contact">Contact</Link>
                     </li>
+                  
+                   
                     {isLoggedIn && (
                       <li>
                         <Link to="/AddPropertyBasic">Add Property</Link>
@@ -75,7 +77,7 @@ const Header = () => {
                     />
                   </a>
                   {isDropdownOpen && (
-                       <div className="dropdown">
+                       <div className="dropdown_nav">
                        {isLoggedIn ? (
                          <>
                            <Link to="/UserProfile">Profile</Link>
@@ -96,6 +98,7 @@ const Header = () => {
             </div>
           </div>
         </header>
+        
       </div>
     </>
   );

@@ -150,3 +150,20 @@
 .tab_content{
     width: 100%;
 }
+.btn_pay_proceed{
+    height: 40px;
+    width: 70px;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn_pay_now{
+    height: 40px;
+    width: 70px;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   margin-left: -140px;
+}

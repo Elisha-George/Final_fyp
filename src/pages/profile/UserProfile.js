@@ -161,9 +161,18 @@ export const UserProfile = () => {
       });
   };
 
+  const renderbtn = (ten) => {
+    if (ten.status === "accepted") {
+      return (
+        <Link to='/PaymentDashboard'><button type="button" className="btn btn-primary btn_pay_proceed">Proceed</button>; </Link>
+      );
+    } 
+  }
+
+
   const renderButton = (bid) => {
     if (bid.status === "accepted") {
-      return  <Link to='/PaymentDashboard'><button type="button" className="btn btn-primary btn_pay_now">Proceed</button>; </Link>
+      return  <Link to='/PaymentDashboard'><button type="button" className="btn btn-primary btn_pay_now">Pay Now</button>; </Link>
     } else if (bid.status === "rejected") {
       return (
        
@@ -246,10 +255,10 @@ export const UserProfile = () => {
                 </button>
             </div>
             <div class="modal-body">
-                <form>
+                <form onSubmit={handleSave}>
                     <div class="form-row">
                         <div class="form-group col-md-6 form_payment">
-                            <label for="name">Email</label>
+                            <label for="name">Name</label>
                             <input type="text" class="form-control" id="name" value={formData.name} onChange={(e) =>
                                 setFormData({ ...formData, name: e.target.value })
                               }/>
@@ -260,12 +269,12 @@ export const UserProfile = () => {
                                 setFormData({ ...formData, name: e.target.value })}/>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-primary btn-lg btn-block btn_pay">Edit Details</button>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block btn_pay">Edit Details</button>
                 </form>
             </div>
             <div class="modal-footer paymnet_modal_footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-success">Approve</button>
+               
             </div>
         </div>
     </div>
@@ -325,9 +334,9 @@ export const UserProfile = () => {
                     </div>
                     <div className="dashItems" id="req">
                       <div className="totalReq">
-                        <h5>Your total Reviews</h5>
+                        <h5>Your total Rating</h5>
 
-                        <h3>40 Reviews</h3>
+                        <h3>5 Stars</h3>
                       </div>
                     </div>
                     <div className="dashItems" id="Amt">
@@ -421,7 +430,7 @@ export const UserProfile = () => {
 
                             <div className="row row_bidDetails">
                               <div className="col-md-6">
-                                <h6 className="bid_detilHead">Email : </h6>
+                                <h6 className="bid_detilHead">Name: </h6>
                               </div>
                               <div className="col-md-6">
                                 <h6>eman@gmail.com</h6>
@@ -531,15 +540,15 @@ export const UserProfile = () => {
                           
                         </tr>
                       </thead>
-                      {tenData.map((bid, index) => (
+                      {tenData.map((ten, index) => (
                         <tbody key={index}>
                           <tr>
-                            <th scope="row">{bid.title}</th>
+                            <th scope="row">{ten.title}</th>
               
-                            <td>{bid.amount}</td>
-                            <td>{bid.title}</td>
-                            <td>{bid.status}</td>
-                            {/* <td>{bid.status}</td> */}
+                            <td>{ten.amount}</td>
+                            <td>{ten.title}</td>
+                            <td>{ten.status}</td>
+                            <td>{renderbtn(ten)}</td>
 
                             <td>
                             {/* {renderButton(bid)} */}

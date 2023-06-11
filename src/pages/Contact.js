@@ -108,7 +108,7 @@ const Contact = () => {
 									<form  onSubmit={submitForm} id="contactForm" name="contactForm" class="contactForm">
 										<div className="row">
 											<div className="col-md-6">
-												<div className="form-group">
+												<div className="form-group contact_group">
 													<label className="label" >Full Name</label>
 													<input
 														 style={{backgroundColor: "white"}} 
@@ -123,7 +123,7 @@ const Contact = () => {
 												</div>
 											</div>	
 											<div className="col-md-6"> 
-												<div className="form-group">
+												<div className="form-group contact_group">
 													<label className="label">Email Address</label>
 													<input
 													 type="email" 
@@ -138,7 +138,7 @@ const Contact = () => {
 												</div>
 											</div>
 											<div className="col-md-12">
-												<div className="form-group">
+												<div className="form-group contact_group">
 													<label className="label" >Subject</label>
 													<input 
 													type="text" 
@@ -153,7 +153,7 @@ const Contact = () => {
 												</div>
 											</div>
 											<div className="col-md-12">
-												<div className="form-group">
+												<div className="form-group contact_group">
 													<label className="label">Message</label>
 													<textarea
 													 style={{backgroundColor: "white"}} 
@@ -168,7 +168,7 @@ const Contact = () => {
 												</div>
 											</div>
 											<div className="col-md-12">
-												<div className="form-group">
+												<div className="form-group contact_group">
 													<input type="submit" value="Send Message" className="btn btn-primary" />
 													<div className="submitting"></div>
 												</div>
