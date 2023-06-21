@@ -85,21 +85,21 @@ link{
     
     /* border-radius: 10px; */
 }
-.AcceptRejectBtn{
+/* .AcceptRejectBtn{
     margin: -56px;
     margin-left: 144px;
-}
+} */
 .btn_pay_now:hover {
     background-color: rgb(4, 103, 53);
   }
 
 
-.reject_button{
+/* .reject_button{
     position: relative;
     top: 6px;
     left: 290px;
-    font-size: 15px;
-}
+    font-size: 15px; */
+/* } */
 .btn_pay_now{
     position: relative;
     top: 6px;

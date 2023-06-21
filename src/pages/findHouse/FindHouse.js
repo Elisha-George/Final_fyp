@@ -70,7 +70,8 @@ export const FindHouse = () => {
     const applyFilters = () => {
       let filteredData = houses;
       if (cityFilter !== '') {
-        filteredData = filteredData.filter((house) => house.city === cityFilter);
+        const cityFilterLower = cityFilter.toLowerCase();
+        filteredData = filteredData.filter((house) => house.city.toLowerCase() === cityFilterLower);
       }
       if (bedroomsFilter !== '') {
         filteredData = filteredData.filter((house) => house.beds === bedroomsFilter);
@@ -141,6 +142,10 @@ export const FindHouse = () => {
           >
             <option value="">City</option>
             <option value="Karachi">Karachi</option>
+            {/* <option value="Islamabad">islamabad</option>
+            <option value="Lahore">lahore</option> */}
+
+
           </select>
 
           <input

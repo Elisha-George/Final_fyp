@@ -245,11 +245,11 @@ export const UserProfile = () => {
 
       {/* //POPUP SCREEN FOR EDITING PROFILE INFORMATION */}
 {editMode && (
-    <div class="modal fade model_payment" id="id_modalEdit" tabindex="-1" role="dialog"
+    <div class="modal fade " id="id_modalEdit" tabindex="-1" role="dialog"
     aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
+    <div class="modal-dialog modal-dialog-centered " role="document">
+        <div class="modal-content model_edit">
+            <div class="modal-header model_profileHEader">
                 <h4 class="modal-title " id="exampleModalCenterTitle">PROFILE INFORMATION</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -257,9 +257,9 @@ export const UserProfile = () => {
             </div>
             <div class="modal-body">
                 <form onSubmit={handleSave}>
-                    <div class="form-row">
-                        <div class="form-group col-md-6 form_payment">
-                            <label for="name">Name</label>
+                    <div class="form-row form_edit">
+                        <div class="form-group col-md-6 ">
+                            <label className="nameLabel" for="name">Name</label>
                             <input type="text" class="form-control" id="name" value={formData.name} onChange={(e) =>
                                 setFormData({ ...formData, name: e.target.value })
                               }/>

@@ -41,7 +41,7 @@ const About = () => {
 
                         </div>
                     <div className="about_para">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ipsum nesciunt similique! Exercitationem cum temporibus consequatur optio neque officia asperiores vero et quisquam eveniet rerum debitis, sed tempora sit officiis autem, consectetur dicta, cumque delectus excepturi dolorem ratione quo praesentium numquam! Omnis cum nostrum error nulla dignissimos! Distinctio, quam fugit. lorem30
+                    Discover a world of endless possibilities with our real estate website. We are the epitome of Dream Homes, offering a seamless experience to find your perfect property. Step into a Property Paradise where luxury meets comfort, and every house becomes a Home Haven. 
                     </div>
                         {/* Text */}
                     </div>

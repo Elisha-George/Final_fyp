@@ -159,6 +159,13 @@ td{
 
    background-color: #8d2e49c7;
 }
+.payment_title{
+    background-color: #8d2e49c7;
+    /* margin-bottom: 30px; */
+}
+.payment_modalBody{
+    background-color: rgb(242, 239, 239);
+}
 .paymnet_modal_footer{
     height: 70px;
     display: flex;

@@ -92,8 +92,24 @@
     font-weight:500;
     color: black;
 }
-.modal-header{
+.model_edit{
+    background-color: rgb(227, 223, 223);
+}
+.model_profileHEader{
     background-color: #8d2e49c7;
+    margin-bottom: 50px;
+
+}
+.form_edit label{
+    
+    margin-left: 13px;
+    font-weight: bold;
+}
+.form_edit input{
+    
+   
+    margin-top: 10px;
+    margin-bottom: 10px;
 
 }
 .modal-header h4{
@@ -157,6 +173,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.reject_button{
+    position: relative;
+    right: 10px;
+    border: 1px solid brown;
+    height: 40px;
+    width: 70px;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
 }
 .btn_pay_now{
     height: 40px;

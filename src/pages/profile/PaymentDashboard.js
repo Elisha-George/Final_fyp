@@ -198,7 +198,7 @@ export const PaymentDashboard = () => {
           >
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header payment_title">
                   <h4 class="modal-title " id="exampleModalCenterTitle">
                     Rent Payment
                   </h4>
@@ -211,9 +211,9 @@ export const PaymentDashboard = () => {
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
-                <div class="modal-body">
-                  <form>
-                    <div class="form-row">
+                <div class="modal-body payment_modalBody">
+                  <form className="payment_modalForm">
+                    <div class="form-row mt-3">
                       <div class="form-group col-md-6 form_payment">
                         <label for="inputEmail4">Email</label>
                         <input
@@ -227,7 +227,7 @@ export const PaymentDashboard = () => {
                           }
                         />
                       </div>
-                      <div class="form-group col-md-6">
+                      <div class="form-group col-md-6 ">
                         <label for="inputPassword4">Name</label>
                         <input
                           type="text"
@@ -241,7 +241,7 @@ export const PaymentDashboard = () => {
                         />
                       </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group mt-1">
                       <label for="inputAddress">Benificiary </label>
                       <input
                         type="text"
@@ -257,7 +257,7 @@ export const PaymentDashboard = () => {
                         }
                       />
                     </div>
-                    <div class="form-group">
+                    <div class="form-group mt-1">
                       <label for="inputAddress2">Property</label>
                       <input
                         type="text"
@@ -270,8 +270,8 @@ export const PaymentDashboard = () => {
                         }
                       />
                     </div>
-                    <div class="form-row">
-                      <div class="form-group col-md-6">
+                    <div class="form-row   mb-3">
+                      <div class="form-group col-md-6 mt-1">
                         <label for="inputCity">Amount</label>
                         <input
                           type="text"
@@ -284,7 +284,7 @@ export const PaymentDashboard = () => {
                         />
                       </div>
 
-                      <div class="form-group col-md-6">
+                      <div class="form-group col-md-6 mt-1">
                         <label for="inputZip">Pin</label>
                         <input
                           type="text"
@@ -312,9 +312,9 @@ export const PaymentDashboard = () => {
 
           <div className="container paymentDashboard">
             <ul class="nav nav-tabs ">
-              <li class="nav-item">
-                <a
-                  class="nav-link"
+              <li class="nav-item" >
+                <a 
+                  class="nav-link active"
                   role="tab"
                   data-toggle="tab"
                   href="#paymentRecord"

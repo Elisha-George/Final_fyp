@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Layout } from "../../components/layout/Layout";
+import { Link} from "react-router-dom";
+
 import { useParams } from "react-router-dom";
 import "./houseDetails.css";
 import {FaStar} from "react-icons/fa";
 
 export const HouseDetails = () => {
-  const [rating, setRating] = useState(null);
+  const [rating, setRating] = useState(4);
   const [hover, setHover] = useState(null);
 
 
@@ -160,7 +162,8 @@ export const HouseDetails = () => {
             </div>
             <div class="col-md-2">
               <button class="Searchbtn" type="search">
-                Back to Search <i class="fa fa-search"></i>
+              <Link className= "backLink" to="/FindHouse">
+              Back to Houses <i class="fa fa-search"></i></Link>
               </button>
             </div>
             <div class="col-md-9 PropertyDetail PropertyDetailName mt-2">
@@ -266,10 +269,10 @@ export const HouseDetails = () => {
                 <p className="text-center caution">You are the owner of this property. You Can't bid here !!!</p>
               ) : (
                 <form >
-                  <h4 class="mt-3">
+                  <h4 class="mt-3 sideProfile_amount">
                     PKR <span>{houses.price}</span>
                   </h4>
-                  <div class="form-group">
+                  <div class="form-group sideInputGroup">
                     <input
                       type="text"
                       class="form-control mb-4"

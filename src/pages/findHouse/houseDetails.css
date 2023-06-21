@@ -20,17 +20,26 @@
     padding: 8px 10px 8px 10px;
     background-color:#526174 ;
     border: none;
-    color: #F1F1F1;
+ 
     border-radius: 5px;
     position: relative;
     left: 45px;
     top: 90px;
 }
-form h4{
+.backLink{
+  color: #F1F1F1;
+  text-decoration: none;
+}
+.backLink:hover{
+  color: #F1F1F1;
+  text-decoration: none;
+}
+.sideProfile_amount{
     text-align: center;
     color: #526174;
+    padding-bottom: 30px;
 }
-form h4 span{
+.sideProfile_amount span{
     color: #D04068;
 }
 .PropertyDetailName{
@@ -95,7 +104,10 @@ form h4 span{
 }
 .SideProfileInfo input{
   border: 0.3px solid #55555598;
-  
+
+}
+.sideInputGroup{
+margin-top: 30px;
 }
 .locationtext{
     color: #526174;
@@ -288,8 +300,8 @@ form h4 span{
     display: block;
   }
   .ratingComponent{
-    position: relative;
-    bottom: 1010px;
+    position: absolute;
+    bottom: 420px;
     /* left: 560px; */
     margin-left: 950px;
     display: flex;
@@ -372,6 +384,7 @@ ul{
   background: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.9)), url("../../images/aboutUsBackground.avif");
   background-size: cover;
 }
+
 
 
   /* ==================================================RATING COMPONENT ================================================================ */
